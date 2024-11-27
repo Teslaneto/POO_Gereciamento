@@ -29,3 +29,4 @@ class Database {
         return $stmt;
     }
 }
+

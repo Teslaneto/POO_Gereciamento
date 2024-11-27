@@ -2,7 +2,7 @@
 require_once 'includes/config.php';
 
 // Controle simples para redirecionar páginas
-$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+$page = isset($_GET['page']) ? $_GET['page'] : 'login';
 $file = "pages/$page.php";
 
 if (file_exists($file)) {

@@ -16,6 +16,14 @@ class Usuario {
     }
 
     public function listarUsuarios() {
-        return $this->db->query("SELECT * FROM usuarios")->fetchAll(PDO::FETCH_ASSOC);
+        return $this->db->query("SELECT * FROM tb_alunos")->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
+    public function verificarLogin($login, $senha){
+        $sql = "SELECT login FROM tb_admin WHERE login = :login AND senha = :senha";
+        $this->db->query($sql,
+        [':nome' => $login,
+         ':senha' => $senha
+        ])->fecth(PDO::FETCH_ASSOC);
     }
 }
