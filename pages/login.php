@@ -1,9 +1,25 @@
 <?php
 // Iniciar a sessão
 session_start();
-
 // Se o formulário de login for enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $login = $_POST['login'];
+    $senha = $_POST['senha'];
+
+    if (!empty($login) && !empty($senha)) {
+        $Usuario = new Usuario($db);
+
+        if ($Usuario->verificarLogin($login, $senha)) {
+            $_SESSION['msg'] = "<p>Seja Bem-vindo!</p>";
+            $_SESSION['logado'] = "SIM";
+        }else{
+            $_SESSION['msg'] = "<p>Login ou Senha Incorretos!</p>";
+            $_SESSION['logado'] = "NAO";
+        }
+    }else{
+        $_SESSION['msg'] = "<p>Por favor, preencha todos os campos!</p>";
+        $_SESSION['logado'] = "NAO";
+    }
 }
 ?>
 <html>
@@ -28,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input  class="submit" type="submit" value="Enviar">
 
                         </form>
+                        <span><?php echo($_SESSION['msg']);?></span>
                 </div>
             </div>
     </body>

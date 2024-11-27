@@ -11,6 +11,7 @@
     <header>
         <h1>Bem-vindo ao Projeto POO PHP</h1>
         <nav>
+            <a href="<?= BASE_URL ?>?page=login">Login</a>
             <a href="<?= BASE_URL ?>?page=home">Home</a>
             <a href="<?= BASE_URL ?>?page=sobre">Sobre</a>
             <a href="<?= BASE_URL ?>?page=contato">Contato</a>
