@@ -1,5 +1,6 @@
 <?php
-class Database {
+class Database 
+{
     private $host;
     private $dbname;
     private $user;
@@ -28,5 +29,6 @@ class Database {
         $stmt->execute($params);
         return $stmt;
     }
+    
 }
 
