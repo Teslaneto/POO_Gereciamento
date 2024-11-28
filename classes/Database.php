@@ -7,7 +7,8 @@ class Database
     private $pass;
     private $pdo;
 
-    public function __construct($host, $dbname, $user, $pass) {
+    public function __construct($host, $dbname, $user, $pass) 
+    {
         $this->host = $host;
         $this->dbname = $dbname;
         $this->user = $user;
@@ -15,7 +16,8 @@ class Database
         $this->connect();
     }
 
-    private function connect() {
+    private function connect() 
+    {
         try {
             $this->pdo = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->pass);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -24,11 +26,12 @@ class Database
         }
     }
 
-    public function query($sql, $params = []) {
+    public function query($sql, $params = []) 
+    {
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($params);
         return $stmt;
     }
-    
+
 }
 
