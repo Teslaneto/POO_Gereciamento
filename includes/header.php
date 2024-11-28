@@ -13,6 +13,7 @@ Session::start();
 
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/text.css">
 </head>
 <body>
     <div>

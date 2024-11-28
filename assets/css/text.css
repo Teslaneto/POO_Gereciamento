@@ -1,0 +1,12 @@
+.color-h1{
+    margin-left: 173px;
+    font-size: 40px;
+}
+.borde{
+    margin: auto;
+    width: 900px;
+    height: auto;
+    border: 1px solid rgb(166, 165, 165);
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.63);
+}
