@@ -1,3 +1,8 @@
-<?php
-echo "<h2>Bem-vindo à Home</h2>";
-echo "<p>Este é um exemplo de estrutura de página em PHP usando POO.</p>";
+<div>
+        <div class="center">
+            <div class="back-ground">
+                <img class="banner" src="/assets/img/matrículas.png" alt="">
+            </div>
+        </div>
+    </div>
+

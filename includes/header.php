@@ -1,5 +1,5 @@
 <?php
-require_once '../controllers/verificarLoginController.php';
+Session::start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +7,10 @@ require_once '../controllers/verificarLoginController.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto POO PHP</title>
+    <!--BOOSTRAP-->
+    <link href="/Bootstrap/bootstrap-4.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/Bootstrap/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js"></script>
+
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/header.css">
 </head>
