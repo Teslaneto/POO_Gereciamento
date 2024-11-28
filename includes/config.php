@@ -1,7 +1,10 @@
 <?php
 // Autoload de classes
-spl_autoload_register(function ($class) { //defina uma lógica para carregar automaticamente os arquivos de classe 
-    include_once "classes/$class.php";
+spl_autoload_register(function ($className) {
+    $file = __DIR__ . '/../classes/' . $className . '.php';
+    if (file_exists($file)) {
+        require_once $file;
+    }
 });
 
 // Configurações gerais
