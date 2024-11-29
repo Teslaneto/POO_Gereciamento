@@ -26,6 +26,24 @@ class Turmas
         );
     }
 
+    public function editarTurma($id)
+    {
+        $sql = "UPDATE tb_turmas SET nome = :nome, Turno = :turno";
+    }
 
 
+    public function nomeProfessorTurma($id)
+    {
+        $sql = "SELECT tb_professores.nome 
+                FROM tb_turmas
+                INNER JOIN tb_professores 
+                ON tb_turmas.id_professores = tb_professores.id WHERE tb_turmas.id
+        ";
+        $nomeProfessor = $this->db->query($sql,
+                        [
+                            ":id" => $id
+                        ]
+                        );
+        return $nomeProfessor;
+    }
 }

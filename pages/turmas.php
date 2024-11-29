@@ -31,9 +31,14 @@ $dadosTurmas = $turmas->listarTurmas();
                             ?>
                             <td>
                                 <div class="d-flex justify-content-start">
-                                    <button type="button" class="btn btn-primary btn-sm mr-2" name="visualizar">Visualizar</button>
-                                    <button type="button" class="btn btn-warning btn-sm mr-2" name="editar">Editar</button>
-                                    <button type="button" class="btn btn-danger btn-sm" name="apagar">Apagar</button>
+                                    <form action="../controllers/TurmaController.php" method="post">
+                                        <?//PEGAR O ID DA TURMA E ATRIBUI AO name='id'?>
+                                        <input  type="hidden" name="id"  value="<?= $dados['id']?>">
+                                        <button type="button" class="btn btn-primary btn-sm mr-2" name="visualizar" value="visualizar">Visualizar</button>                              
+
+                                        <button type="submit" class="btn btn-warning btn-sm mr-2" name="editar"     value="editar">Editar</button>
+                                        <button type="submit" class="btn btn-danger btn-sm"       name="apagar"     value="apagar">Apagar</button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>
