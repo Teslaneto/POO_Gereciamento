@@ -34,7 +34,17 @@ $dadosTurmas = $turmas->listarTurmas();
                                     <form action="../controllers/TurmaController.php" method="post">
                                         <?//PEGAR O ID DA TURMA E ATRIBUI AO name='id'?>
                                         <input  type="hidden" name="id"  value="<?= $dados['id']?>">
-                                        <button type="button" class="btn btn-primary btn-sm mr-2" name="visualizar" value="visualizar">Visualizar</button>                              
+                                        <button 
+                                        type="button" 
+                                        class="btn btn-primary btn-sm mr-2" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#janelaVisualizar"
+                                        data-id="<?= $dados['id'] ?>"
+                                        data-nome="<?= $dados['nome'] ?>"
+                                        data-turno="<?= $dados['turno'] ?>"
+                                    >
+                                        Visualizar
+                                    </button>                             
 
                                         <button type="submit" class="btn btn-warning btn-sm mr-2" name="editar"     value="editar">Editar</button>
                                         <button type="submit" class="btn btn-danger btn-sm"       name="apagar"     value="apagar">Apagar</button>
@@ -48,3 +58,25 @@ $dadosTurmas = $turmas->listarTurmas();
             </div>
         </div>
 </div>
+<script src="../assets/js/capturaDadosJanela.js"></script>
+<!-- JANELA DE VISUALIZAÇÃO -->
+<div class="modal fade" id="janelaVisualizar" tabindex="-1" aria-labelledby="janelaVisualizarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="janelaVisualizarLabel">Mensagem do PHP</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <?php
+                
+                ?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
