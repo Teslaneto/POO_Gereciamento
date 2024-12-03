@@ -32,7 +32,7 @@ $dadosEscolas = $Escolas->listarEscolas();
                             ?>
                             <td>
                                 <div class="d-flex justify-content-start">
-                                    <form action="../controllers/TurmaController.php" method="post">
+                                    <form action="../controllers/escolaController.php" method="post">
                                         <?//PEGAR O ID DA TURMA E ATRIBUI AO name='id'?>
                                         <input  type="hidden" name="id"  value="<?= $dados['id']?>">
                                         <button 

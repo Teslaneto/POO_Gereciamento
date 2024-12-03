@@ -16,4 +16,13 @@ class Escolas
         return $listarEscolas;
     }
 
+    public function apagarEscola($id){
+        $query = "DELETE FROM tb_escola WHERE id = :id";
+        $this->db->query($query,
+        [
+            ":id" => $id
+        ]
+        );
+    }
+
 }
