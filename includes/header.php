@@ -14,6 +14,7 @@ Session::start();
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/header.css">
     <link rel="stylesheet" type="text/css" href="assets/css/text.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/form_escola.css">
 </head>
 <body>
     <div>

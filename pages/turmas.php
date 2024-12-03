@@ -1,7 +1,7 @@
 <?php
 $turmas = new Turmas($db);
-$dadosTurmas = $turmas->listarTurmas();
 
+$dadosTurmas = $turmas->listarTurmas();
 ?>
 <h1 class="text-left color-h1">Turmas</h1>
 <div class="borde">
@@ -28,6 +28,7 @@ $dadosTurmas = $turmas->listarTurmas();
                             echo("<td>" .$dados['nome']. "</td>");
                             //TURNO DO ALUNO
                             echo("<td>" .$dados['turno']. "</td>");
+                            
                             ?>
                             <td>
                                 <div class="d-flex justify-content-start">
@@ -64,7 +65,7 @@ $dadosTurmas = $turmas->listarTurmas();
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="janelaVisualizarLabel">Mensagem do PHP</h5>
+                <h5 class="modal-title" id="janelaVisualizarLabel">Dados Turma:</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
