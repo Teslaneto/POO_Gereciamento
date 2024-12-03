@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modalBody.innerHTML = `
             <p><strong>ID da Turma:</strong> ${turmaId}</p>
             <p><strong>Nome:</strong> ${turmaNome}</p>
-            <p><strong>Turno:</strong> ${turmaTurno}</p>
+            <p><strong>Endereço:</strong> ${turmaTurno}</p>
         `;
     });
 });

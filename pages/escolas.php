@@ -3,7 +3,7 @@ $Escolas = new Escolas($db);
 $dadosEscolas = $Escolas->listarEscolas();
 ?>
 <h1 class="form-header text-center h4">Gerenciamento de Escolas</h1>
-<button type="submit" class="button-dir btn btn-success btn-sm mr-2" name="addEscola" value="addEscola">Adicionar Escolar</button>
+<button type="submit" class="button-dir btn btn-success btn-sm mr-2" name="addEscola" value="addEscola">Adicionar Escola</button>
 <div class="borde">
         <div class="d-flex justify-content-center align-items-center vh-100">
             <div class="container">

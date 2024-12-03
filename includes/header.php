@@ -23,8 +23,8 @@ Session::start();
             <li><a href="<?= BASE_URL?>?page=home">Home</a></li>
             <li><a href="<?= BASE_URL?>?page=turmas">Turmas</a></li>
             <li><a href="<?= BASE_URL?>?page=escolas">Escolas</a></li>
-            <li><a href="professores.php">Professores</a></li>
-            <li><a href="alunos.php">Alunos</a></li>
+            <li><a href="<?= BASE_URL?>?page=professores">Professores</a></li>
+            <li><a href="<?= BASE_URL?>?page=alunos">Alunos</a></li>
             <li><a href="<?= BASE_URL?>?page=sair">Sair</a></li>
         </ul>
     </div>

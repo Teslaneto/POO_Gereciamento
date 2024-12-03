@@ -3,7 +3,7 @@ $turmas = new Turmas($db);
 
 $dadosTurmas = $turmas->listarTurmas();
 ?>
-<h1 class="text-left color-h1">Turmas</h1>
+<h1 class="text-center h4">Turmas</h1>
 <div class="borde">
         <div class="d-flex justify-content-center align-items-center vh-100">
             <div class="container">
